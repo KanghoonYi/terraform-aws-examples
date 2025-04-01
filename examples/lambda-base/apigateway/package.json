@@ -1,0 +1,36 @@
+{
+  "name": "apigateway",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:dev": "NODE_ENV=dev tsx esbuild.ts && (cd .esbuild && npm install --omit=dev)",
+    "build:prod": "NODE_ENV=production tsx esbuild.ts && (cd .esbuild && npm install --omit=dev)",
+    "local-run:dev": "sam local start-lambda --hook-name terraform --beta-features"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/aws-lambda": "^8.10.147",
+    "@types/node": "^22.13.11",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "esbuild": "^0.24.2",
+    "esbuild-node-externals": "^1.16.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-plugin-package-json": "^2.0.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
+    "ts-loader": "^9.5.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-transform-paths": "^3.5.3"
+  }
+}

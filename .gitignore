@@ -37,3 +37,5 @@ override.tf.json
 terraform.rc
 
 .idea
+
+node_modules
