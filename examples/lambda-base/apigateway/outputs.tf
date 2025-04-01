@@ -1,0 +1,10 @@
+data "aws_caller_identity" "current" {}
+
+# output "instance_public_ip" {
+#   value = ""                                          # The actual value to be outputted
+#   description = "The public IP address of the EC2 instance" # Description of what this output represents
+# }
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
