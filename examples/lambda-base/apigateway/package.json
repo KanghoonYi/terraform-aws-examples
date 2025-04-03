@@ -5,7 +5,7 @@
   "scripts": {
     "build:dev": "NODE_ENV=dev tsx esbuild.ts && (cd .esbuild && npm install --omit=dev)",
     "build:prod": "NODE_ENV=production tsx esbuild.ts && (cd .esbuild && npm install --omit=dev)",
-    "local-run:dev": "sam local start-lambda --hook-name terraform --beta-features"
+    "local-run:dev": "sam local start-api --hook-name terraform --beta-features"
   },
   "author": "",
   "license": "Apache-2.0",
