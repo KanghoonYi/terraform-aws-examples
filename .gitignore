@@ -43,3 +43,4 @@ node_modules
 .esbuild
 .terraform
 builds
+.aws-sam-iacs

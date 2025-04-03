@@ -1,6 +1,6 @@
 variable "stage" {
   type = string
-  default = "prod"
+  default = "dev"
   validation {
     condition     = can(regex("^(dev|staging|prod)$", var.stage))
     error_message = "Invalid 'stage' variable"
@@ -17,4 +17,5 @@ variable "lambda_environment_variables" {
 
 variable "source_code_bucket_name" {
   type    = string
+  default = "tf-lambda-source-dev"
 }
